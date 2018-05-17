@@ -1,14 +1,14 @@
-#include "graph.h"
 #include <iostream>
+#include "graph.h"
 
-Graph::Graph(long long v): adj_list(v) {
+Graph::Graph(int v): adj_list(v) {
 	num_vertices = v;
 	num_edges = 0;
 }
 
 Graph::~Graph() {}
 
-void Graph::addEdge(long long s, long long d, int w) {
+void Graph::addEdge(int s, int d, int w) {
 	adj_list[s].push_back(std::make_pair(d, w));
 	num_edges++;
 }
@@ -24,7 +24,7 @@ void Graph::printGraph() {
 	}
 }
 
-std::vector < std::vector< std::pair<long long, long long> > > Graph::getAdjList() {
+std::vector < std::vector< std::pair<int, int> > > Graph::getAdjList() {
 	return adj_list;
 }
 

@@ -6,16 +6,16 @@
 
 class Graph {
 
-	long long num_vertices;
-	long long num_edges;
-	std::vector < std::vector< std::pair<long long, long long> > > adj_list;
+	int num_vertices;
+	int num_edges;
+	std::vector < std::vector< std::pair<int, int> > > adj_list;
 
 	public:
-		Graph(long long v);
+		Graph(int v);
 		~Graph();
-		void addEdge(long long s, long long d, int w);
+		void addEdge(int s, int d, int w);
 		void printGraph();	
-		std::vector < std::vector< std::pair<long long, long long> > > getAdjList();
+		std::vector < std::vector< std::pair<int, int> > > getAdjList();
 		long long getNumVertices();
 		long long getNumEdges();
 };

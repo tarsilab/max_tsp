@@ -1,21 +1,25 @@
 #include <iostream>
-
 #include "graph.h"
+#include "baseline.h"
 
 int main() {
 
 	long long source, destination, time;
 	int weight;
+	int vertices;
 
-	
-	Graph graph(7604);
+	std::cin >> vertices;
 
-	while (std::cin >> source >> destination >> weight >> time) {
-		//std::cout << source << " " << destination << " " << weight << "\n";
+	Graph graph(vertices);
+
+	while (std::cin >> source >> destination >> weight) {
 		graph.addEdge(source - 1, destination - 1, weight);
 	}
 
-	graph.printGraph();
+	//graph.printGraph();
 	
+	furthestNeighbor(graph, 0);
+	std::cout << "\n";
+
 	return 0;
 }  
