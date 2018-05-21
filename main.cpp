@@ -19,7 +19,8 @@ int main() {
 	//graph.printGraph();
 	
 	furthestNeighbor(graph, 0);
-	std::cout << "\n";
+	//std::cout << "\n";
 
+	greedy(graph);
 	return 0;
 }  
