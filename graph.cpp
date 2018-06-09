@@ -10,6 +10,7 @@ Graph::~Graph() {}
 
 void Graph::addEdge(int s, int d, int w) {
 	adj_list[s].push_back(std::make_pair(d, w));
+	adj_list[d].push_back(std::make_pair(s, w));
 	num_edges++;
 }
 
